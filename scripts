@@ -250,3 +250,332 @@ CREATE TABLE TELEFONE(
 /*EM RELACIONAMENTO 1 X 1 A CHAVE ESTRANGEIRA FICA NA TABELA MAIS FRACA*/
 /* EM RELACIONAMENTO 1 X N A CHAVE ESTRANGEIRA FICARA SEMPA NA CARDINALIDADE N*/
 
+INSERT INTO CLIENTE VALUES(NULL,'JOAO','M','JOAOSQL@GMAIL.COM','789456123456');
+INSERT INTO CLIENTE VALUES(NULL,'MARIA','F','MARIA_DB@HOTMAIL.COM','123456789012');
+INSERT INTO CLIENTE VALUES(NULL,'CARLOS','M','CARLOS.DATA@YAHOO.COM','456789123789');
+INSERT INTO CLIENTE VALUES(NULL,'ANA','F','ANA.SQL@GMAIL.COM','987654321654');
+INSERT INTO CLIENTE VALUES(NULL,'PEDRO','M','PEDRO_DB@OUTLOOK.COM','321654987321');
+INSERT INTO CLIENTE VALUES(NULL,'FERNANDA','F','FERNANDA.SQL@GMAIL.COM','654987321987');
+INSERT INTO CLIENTE VALUES(NULL,'LUCAS','M','LUCAS_DB@HOTMAIL.COM','852963741258');
+INSERT INTO CLIENTE VALUES(NULL,'BEATRIZ','F','BEATRIZ.DATA@YAHOO.COM','147258369147');
+INSERT INTO CLIENTE VALUES(NULL,'RAFAEL','M','RAFAEL.SQL@GMAIL.COM','963852741963');
+INSERT INTO CLIENTE VALUES(NULL,'JULIANA','F','JULIANA_DB@OUTLOOK.COM','258369147258');
+INSERT INTO CLIENTE VALUES(NULL,'MARCOS','M','MARCOS_DB@GMAIL.COM','741852963741');
+INSERT INTO CLIENTE VALUES(NULL,'PATRICIA','F','PATRICIA_DB@HOTMAIL.COM','369258147369');
+INSERT INTO CLIENTE VALUES(NULL,'ROBERTO','M','ROBERTO_DB@YAHOO.COM','852147963852');
+INSERT INTO CLIENTE VALUES(NULL,'CAMILA','F','CAMILA_DB@OUTLOOK.COM','159753456159');
+INSERT INTO CLIENTE VALUES(NULL,'ANDRE','M','ANDRE_DB@GMAIL.COM','753951456753');
+
++------------+----------+------+-------------------------+--------------+
+| ID_CLIENTE | NOME     | SEXO | EMAIL                   | CPF          |
++------------+----------+------+-------------------------+--------------+
+|          1 | JOAO     | M    | JOAOSQL@GMAIL.COM       | 789456123456 |
+|          2 | MARIA    | F    | MARIA_DB@HOTMAIL.COM    | 123456789012 |
+|          3 | CARLOS   | M    | CARLOS.DATA@YAHOO.COM   | 456789123789 |
+|          4 | ANA      | F    | ANA.SQL@GMAIL.COM       | 987654321654 |
+|          5 | PEDRO    | M    | PEDRO_DB@OUTLOOK.COM    | 321654987321 |
+|          6 | FERNANDA | F    | FERNANDA.SQL@GMAIL.COM  | 654987321987 |
+|          7 | LUCAS    | M    | LUCAS_DB@HOTMAIL.COM    | 852963741258 |
+|          8 | BEATRIZ  | F    | BEATRIZ.DATA@YAHOO.COM  | 147258369147 |
+|          9 | RAFAEL   | M    | RAFAEL.SQL@GMAIL.COM    | 963852741963 |
+|         10 | JULIANA  | F    | JULIANA_DB@OUTLOOK.COM  | 258369147258 |
+|         11 | MARCOS   | M    | MARCOS_DB@GMAIL.COM     | 741852963741 |
+|         12 | PATRICIA | F    | PATRICIA_DB@HOTMAIL.COM | 369258147369 |
+|         13 | ROBERTO  | M    | ROBERTO_DB@YAHOO.COM    | 852147963852 |
+|         14 | CAMILA   | F    | CAMILA_DB@OUTLOOK.COM   | 159753456159 |
+|         15 | ANDRE    | M    | ANDRE_DB@GMAIL.COM      | 753951456753 |
++------------+----------+------+-------------------------+--------------+
+
+INSERT INTO ENDERECO VALUES (NULL,'EMILIO TAGLIARI','CENTRO','PORTO ALEGRE','RS',1);
+INSERT INTO ENDERECO VALUES (NULL,'AVENIDA IPIRANGA','PARTENON','PORTO ALEGRE','RS',2);
+INSERT INTO ENDERECO VALUES (NULL,'RUA DAS FLORES','JARDIM BOTÂNICO','CURITIBA','PR',3);
+INSERT INTO ENDERECO VALUES (NULL,'AVENIDA PAULISTA','BELAVISTA','SÃO PAULO','SP',4);
+INSERT INTO ENDERECO VALUES (NULL,'RUA XV DE NOVEMBRO','CENTRO','JOINVILLE','SC',5);
+INSERT INTO ENDERECO VALUES (NULL,'AVENIDA BEIRA MAR','PRAIA DO CANTO','VITÓRIA','ES',6);
+INSERT INTO ENDERECO VALUES (NULL,'RUA SETE DE SETEMBRO','CENTRO','FLORIANÓPOLIS','SC',7);
+INSERT INTO ENDERECO VALUES (NULL,'AVENIDA AMAZONAS','CENTRO','BELO HORIZONTE','MG',8);
+INSERT INTO ENDERECO VALUES (NULL,'RUA DAS PALMEIRAS','TIJUCA','RIO DE JANEIRO','RJ',9);
+INSERT INTO ENDERECO VALUES (NULL,'AVENIDA BRASIL','CENTRO','CAXIAS DO SUL','RS',10);
+INSERT INTO ENDERECO VALUES (NULL,'RUA DOS PINHEIROS','CENTRO','CANOAS','RS',14);
+INSERT INTO ENDERECO VALUES (NULL,'AVENIDA DAS AMÉRICAS','JARDIM','SANTA CRUZ DO SUL','RS',11);
+INSERT INTO ENDERECO VALUES (NULL,'RUA CASTELO BRANCO','CENTRO','NOVO HAMBURGO','RS',15);
+INSERT INTO ENDERECO VALUES (NULL,'AVENIDA GETÚLIO VARGAS','CENTRO','SÃO LEOPOLDO','RS',13);
+INSERT INTO ENDERECO VALUES (NULL,'RUA FLORES DA CUNHA','CENTRO','BENTO GONÇALVES','RS',12);
+
+
++------------+------------------------+-----------------+-------------------+----+-----------+
+| ID_ENDERCO | RUA                    | BAIRRO          | CIDADE            | UF | IDCLIENTE |
++------------+------------------------+-----------------+-------------------+----+-----------+
+|          1 | EMILIO TAGLIARI        | CENTRO          | PORTO ALEGRE      | RS |         1 |
+|          2 | AVENIDA IPIRANGA       | PARTENON        | PORTO ALEGRE      | RS |         2 |
+|          3 | RUA DAS FLORES         | JARDIM BOTÂNICO | CURITIBA          | PR |         3 |
+|          4 | AVENIDA PAULISTA       | BELAVISTA       | SÃO PAULO         | SP |         4 |
+|          5 | RUA XV DE NOVEMBRO     | CENTRO          | JOINVILLE         | SC |         5 |
+|          6 | AVENIDA BEIRA MAR      | PRAIA DO CANTO  | VITÓRIA           | ES |         6 |
+|          7 | RUA SETE DE SETEMBRO   | CENTRO          | FLORIANÓPOLIS     | SC |         7 |
+|          8 | AVENIDA AMAZONAS       | CENTRO          | BELO HORIZONTE    | MG |         8 |
+|          9 | RUA DAS PALMEIRAS      | TIJUCA          | RIO DE JANEIRO    | RJ |         9 |
+|         10 | AVENIDA BRASIL         | CENTRO          | CAXIAS DO SUL     | RS |        10 |
+|         11 | RUA DOS PINHEIROS      | CENTRO          | CANOAS            | RS |        14 |
+|         12 | AVENIDA DAS AMÉRICAS   | JARDIM          | SANTA CRUZ DO SUL | RS |        11 |
+|         13 | RUA CASTELO BRANCO     | CENTRO          | NOVO HAMBURGO     | RS |        15 |
+|         14 | AVENIDA GETÚLIO VARGAS | CENTRO          | SÃO LEOPOLDO      | RS |        13 |
+|         15 | RUA FLORES DA CUNHA    | CENTRO          | BENTO GONÇALVES   | RS |        12 |
++------------+------------------------+-----------------+-------------------+----+-----------+
+SELECT * FROM ENDERECO;
+
+INSERT INTO TELEFONE VALUES (NULL,'CEL','89456123',5);
+INSERT INTO TELEFONE VALUES (NULL,'RES','45612389',2);
+INSERT INTO TELEFONE VALUES (NULL,'COM','78945612',7);
+INSERT INTO TELEFONE VALUES (NULL,'CEL','32165498',1);
+INSERT INTO TELEFONE VALUES (NULL,'RES','98712345',9);
+INSERT INTO TELEFONE VALUES (NULL,'COM','65478932',4);
+INSERT INTO TELEFONE VALUES (NULL,'CEL','85296374',10);
+INSERT INTO TELEFONE VALUES (NULL,'RES','14725836',3);
+INSERT INTO TELEFONE VALUES (NULL,'COM','96385274',8);
+INSERT INTO TELEFONE VALUES (NULL,'CEL','25836914',6);
+INSERT INTO TELEFONE VALUES (NULL,'CEL','99874512',2);
+INSERT INTO TELEFONE VALUES (NULL,'RES','45698712',9);
+INSERT INTO TELEFONE VALUES (NULL,'COM','78912345',10);
+INSERT INTO TELEFONE VALUES (NULL,'CEL','32198765',14);
+INSERT INTO TELEFONE VALUES (NULL,'RES','85274196',12);
+
+
++-------------+------+----------+-----------+
+| ID_TELEFONE | TIPO | NUMERO   | IDCLIENTE |
++-------------+------+----------+-----------+
+|           1 | CEL  | 89456123 |         5 |
+|           2 | RES  | 45612389 |         2 |
+|           3 | COM  | 78945612 |         7 |
+|           4 | CEL  | 32165498 |         1 |
+|           5 | RES  | 98712345 |         9 |
+|           6 | COM  | 65478932 |         4 |
+|           7 | CEL  | 85296374 |        10 |
+|           8 | RES  | 14725836 |         3 |
+|           9 | COM  | 96385274 |         8 |
+|          10 | CEL  | 25836914 |         6 |
+|          11 | CEL  | 99874512 |         2 |
+|          12 | RES  | 45698712 |         9 |
+|          13 | COM  | 78912345 |        10 |
+|          14 | CEL  | 32198765 |        14 |
+|          15 | RES  | 85274196 |        12 |
++-------------+------+----------+-----------+
+
+/*SELEÇÃO, PROJEÇÃO E JUNÇÃO*/
+
+/* PROJEÇÃO -> TUDO QUE VOCÊ QUER VER NA TELA*/
+SELECT NOW() AS DATA_HORA;
+SELECT * FROM CLIENTE;
+
+/*SELEÇÃO*/
+/* É UM SUBCONJUNTO DO CONJUNTO UNIVERSO*/
+SELECT NOME FROM CLIENTE
+WHERE SEXO = 'F';  <-- SELEÇÃO DENTRO DE UM CONJUNTO ONDE QUERO SÓ OS NOMES QUE ESTÃO COMO 'F'
+
+/* JUNÇÃO* -> JOIN */
+
+SELECT NOME,SEXO,ID_CLIENTE FROM CLIENTE;
++----------+------+------------+ 
+| NOME     | SEXO | ID_CLIENTE | 
++----------+------+------------+ 
+| JOAO     | M    |          1 | 
+| MARIA    | F    |          2 | 
+| CARLOS   | M    |          3 | 
+| ANA      | F    |          4 |
+| PEDRO    | M    |          5 |
+| FERNANDA | F    |          6 |
+| LUCAS    | M    |          7 |
+| BEATRIZ  | F    |          8 |
+| RAFAEL   | M    |          9 |
+| JULIANA  | F    |         10 |
+| MARCOS   | M    |         11 |
+| PATRICIA | F    |         12 |
+| ROBERTO  | M    |         13 |
+| CAMILA   | F    |         14 |  
+| ANDRE    | M    |         15 | 
++----------+------+------------+     
+
+
+
+SELECT IDCLIENTE,BAIRRO,CIDADE FROM ENDERECO;
++-----------+-----------------+-------------------+
+| IDCLIENTE | BAIRRO          | CIDADE            |
++-----------+-----------------+-------------------+
+|         1 | CENTRO          | PORTO ALEGRE      |
+|         2 | PARTENON        | PORTO ALEGRE      |
+|         3 | JARDIM BOTÂNICO | CURITIBA          |
+|         4 | BELAVISTA       | SÃO PAULO         |
+|         5 | CENTRO          | JOINVILLE         |
+|         6 | PRAIA DO CANTO  | VITÓRIA           |
+|         7 | CENTRO          | FLORIANÓPOLIS     |
+|         8 | CENTRO          | BELO HORIZONTE    |
+|         9 | TIJUCA          | RIO DE JANEIRO    |
+|        10 | CENTRO          | CAXIAS DO SUL     |
+|        14 | CENTRO          | CANOAS            |
+|        11 | JARDIM          | SANTA CRUZ DO SUL |
+|        15 | CENTRO          | NOVO HAMBURGO     |
+|        13 | CENTRO          | SÃO LEOPOLDO      |
+|        12 | CENTRO          | BENTO GONÇALVES   |
++-----------+-----------------+-------------------+
+
+/*COLOQUEI MANUALMENTE AS DUAS TABELAS LADO A LADO PARA ENTENDER O INNER JOIN*/
+
++----------+------+------------+ +-----------+-----------------+-------------------+
+| NOME     | SEXO | ID_CLIENTE | | IDCLIENTE |     BAIRRO      |      CIDADE       |
++----------+------+------------+ +-----------+-----------------+-------------------+
+| JOAO     | M    |          1 | |         1 | CENTRO          | PORTO ALEGRE      |
+| MARIA    | F    |          2 | |         2 | PARTENON        | PORTO ALEGRE      | 
+| CARLOS   | M    |          3 | |         3 | JARDIM BOTÂNICO | CURITIBA          | 
+| ANA      | F    |          4 | |         4 | BELAVISTA       | SÃO PAULO         |
+| PEDRO    | M    |          5 | |         5 | CENTRO          | JOINVILLE         |
+| FERNANDA | F    |          6 | |         6 | PRAIA DO CANTO  | VITÓRIA           |
+| LUCAS    | M    |          7 | |         7 | CENTRO          | FLORIANÓPOLIS     |
+| BEATRIZ  | F    |          8 | |         8 | CENTRO          | BELO HORIZONTE    |
+| RAFAEL   | M    |          9 | |         9 | TIJUCA          | RIO DE JANEIRO    |
+| JULIANA  | F    |         10 | |        10 | CENTRO          | CAXIAS DO SUL     |
+| MARCOS   | M    |         11 | |        11 | JARDIM          | SANTA CRUZ DO SUL |
+| PATRICIA | F    |         12 | |        12 | CENTRO          | BENTO GONÇALVES   |
+| ROBERTO  | M    |         13 | |        13 | CENTRO          | SÃO LEOPOLDO      | 
+| CAMILA   | F    |         14 | |        14 | CENTRO          | CANOAS            | 
+| ANDRE    | M    |         15 | |        15 | CENTRO          | NOVO HAMBURGO     |
++----------+------+------------+ +-----------+-----------------+-------------------+ 
+
+/*NOME, SEXO, BAIRRO, CIDADE*/
+SELECT NOME, SEXO, BAIRRO, CIDADE
+FROM CLIENTE
+INNER JOIN ENDERECO
+ON IDCLIENTE = ID_CLIENTE;
++----------+------+-----------------+-------------------+
+| NOME     | SEXO | BAIRRO          | CIDADE            |
++----------+------+-----------------+-------------------+
+| JOAO     | M    | CENTRO          | PORTO ALEGRE      |
+| MARIA    | F    | PARTENON        | PORTO ALEGRE      |
+| CARLOS   | M    | JARDIM BOTÂNICO | CURITIBA          |
+| ANA      | F    | BELAVISTA       | SÃO PAULO         |
+| PEDRO    | M    | CENTRO          | JOINVILLE         |
+| FERNANDA | F    | PRAIA DO CANTO  | VITÓRIA           |
+| LUCAS    | M    | CENTRO          | FLORIANÓPOLIS     |
+| BEATRIZ  | F    | CENTRO          | BELO HORIZONTE    |
+| RAFAEL   | M    | TIJUCA          | RIO DE JANEIRO    |
+| JULIANA  | F    | CENTRO          | CAXIAS DO SUL     |
+| MARCOS   | M    | JARDIM          | SANTA CRUZ DO SUL |
+| PATRICIA | F    | CENTRO          | BENTO GONÇALVES   |
+| ROBERTO  | M    | CENTRO          | SÃO LEOPOLDO      |
+| CAMILA   | F    | CENTRO          | CANOAS            |
+| ANDRE    | M    | CENTRO          | NOVO HAMBURGO     |
++----------+------+-----------------+-------------------+
+
+/*NOME, SEXO, BAIRRO, CIDADE*/
+SELECT NOME, SEXO, BAIRRO, CIDADE /*PROJEÇÃO*/
+FROM CLIENTE /*ORIGEM*/
+INNER JOIN ENDERECO /*JUNÇÃO*/
+ON IDCLIENTE = ID_CLIENTE
+WHERE SEXO = 'F'; /*SELEÇÃO*/
++----------+------+----------------+-----------------+
+| NOME     | SEXO | BAIRRO         | CIDADE          |
++----------+------+----------------+-----------------+
+| MARIA    | F    | PARTENON       | PORTO ALEGRE    |
+| ANA      | F    | BELAVISTA      | SÃO PAULO       |
+| FERNANDA | F    | PRAIA DO CANTO | VITÓRIA         |
+| BEATRIZ  | F    | CENTRO         | BELO HORIZONTE  |
+| JULIANA  | F    | CENTRO         | CAXIAS DO SUL   |
+| PATRICIA | F    | CENTRO         | BENTO GONÇALVES |
+| CAMILA   | F    | CENTRO         | CANOAS          |
++----------+------+----------------+-----------------+
+
+SELECT C.NOME, C.SEXO, E.BAIRRO, E.CIDADE, T.TIPO, T.NUMERO
+FROM CLIENTE C
+INNER JOIN ENDERECO  E 
+ON E.IDCLIENTE = C.ID_CLIENTE
+INNER JOIN TELEFONE  T
+ON T.IDCLIENTE = C.ID_CLIENTE;
+
+/* SQL É LINGUAGEM DE QUARTA GERAÇÃO*/
+/*
+	DML DATA MANIPULATION LANGUAGE
+	DDL DATA DEFINITION LANGUAGE
+	DCL DATA CONTROL LANGUAGE
+	TCL TRANSACTION CONTROL LANGUAGE
+*/
+
+
+/* EXERCICIOS DML */
+
+DROP DATABASE COMERCIO;
+
+CREATE DATABASE COMERCIO;
+
+USE COMERCIO;
+
+CREATE TABLE CLIENTE (
+	ID_CLIENTE INT PRIMARY KEY AUTO_INCREMENT,
+	NOME VARCHAR(20) NOT NULL,
+	SEXO ENUM ('M','F') NOT NULL,
+	EMAIL VARCHAR(20) UNIQUE,
+	CPF CHAR(11) UNIQUE
+);
+
+INSERT INTO CLIENTE VALUES(NULL,'JOAO','M','JOAOA@IG.COM','76567587887');
+INSERT INTO CLIENTE VALUES(NULL,'CARLOS','M','CARLOSA@IG.COM','5464553466');
+INSERT INTO CLIENTE VALUES(NULL,'ANA','F','ANA@IG.COM','456545678');
+INSERT INTO CLIENTE VALUES(NULL,'CLARA','F',NULL,'5687766856');
+INSERT INTO CLIENTE VALUES(NULL,'JORGE','M','JORGE@IG.COM','8756547688');
+INSERT INTO CLIENTE VALUES(NULL,'CELIA','M','JCELIA@IG.COM','5767876889');
+
+
+INSERT INTO CLIENTE VALUES(NULL,'PAULA','M',NULL,'77437493');
+INSERT INTO CLIENTE VALUES(NULL,'FLAVIO','M','FLAVIO@IG.COM','4657765');
+INSERT INTO CLIENTE VALUES(NULL,'ANDRE','M','ANDRE@GLOBO.COM','7687567');
+INSERT INTO CLIENTE VALUES(NULL,'GIOVANA','F',NULL,'0876655');
+INSERT INTO CLIENTE VALUES(NULL,'KARLA','M','KARLA@GMAIL.COM','545676778');
+INSERT INTO CLIENTE VALUES(NULL,'DANIELE','M','DANIELE@GMAIL.COM','43536789');
+INSERT INTO CLIENTE VALUES(NULL,'LORENA','M',NULL,'774557887');
+INSERT INTO CLIENTE VALUES(NULL,'EDUARDO','M',NULL,'54376457');
+INSERT INTO CLIENTE VALUES(NULL,'ANTONIO','F','ANTONIO@IG.COM','12436767');
+INSERT INTO CLIENTE VALUES(NULL,'ANTONIO','M','ANTONIO@UOL.COM','3423565');
+INSERT INTO CLIENTE VALUES(NULL,'ELAINE','M','ELAINE@GLOBO.COM','32567763');
+INSERT INTO CLIENTE VALUES(NULL,'CARMEM','M','CARMEM@IG.COM','787832213');
+INSERT INTO CLIENTE VALUES(NULL,'ADRIANA','F','ADRIANA@GMAIL.COM','88556942');
+INSERT INTO CLIENTE VALUES(NULL,'JOICE','F','JOICE@GMAIL.COM','55412256');
+
+CREATE TABLE ENDERECO (
+	ID_ENDERECO INT PRIMARY KEY AUTO_INCREMENT,
+	RUA VARCHAR(30) NOT NULL,
+	BAIRRO VARCHAR(30) NOT NULL,
+	CIDADE VARCHAR(30)  NOT NULL,
+	ESTADO CHAR(2) NOT NULL,
+	IDCLIENTE INT UNIQUE,
+
+	FOREIGN KEY(IDCLIENTE)
+	REFERENCES CLIENTE(ID_CLIENTE)  <-- Se refere a chave primaria da tabela cliente (forte)
+);
+
+
+INSERT INTO ENDERECO VALUES(NULL,'RUA ANTONIO SA','CENTRO','B. HORIZONTE','MG',4);
+INSERT INTO ENDERECO VALUES(NULL,'RUA CAPITAO HERMES','CENTRO','RIO DE JANEIRO','RJ',1);
+INSERT INTO ENDERECO VALUES(NULL,'RUA PRES VARGAS','JARDINS','SAO PAULO','SP',3);
+INSERT INTO ENDERECO VALUES(NULL,'RUA ALFANDEGA','ESTACIO','RIO DE JANEIRO','RJ',2);
+INSERT INTO ENDERECO VALUES(NULL,'RUA DO OUVIDOR','FLAMENGO','RIO DE JANEIRO','RJ',6);
+INSERT INTO ENDERECO VALUES(NULL,'RUA URUGUAIANA','CENTRO','VITORIA','ES',5);
+
+
+CREATE TABLE TELEFONE(
+	ID_TELEFONE INT PRIMARY KEY AUTO_INCREMENT, 
+	TIPO ENUM('RES','COM','CEL') NOT NULL,
+	NUMERO VARCHAR(10) NOT NULL,
+	IDCLIENTE INT,
+
+	FOREIGN KEY(IDCLIENTE)
+	REFERENCES CLIENTE(ID_CLIENTE) 
+);
+
+INSERT INTO TELEFONE VALUES(NULL,'CEL','78458743',5);
+INSERT INTO TELEFONE VALUES(NULL,'RES','56576876',5);
+INSERT INTO TELEFONE VALUES(NULL,'CEL','87866896',1);
+INSERT INTO TELEFONE VALUES(NULL,'COM','54768899',2);
+INSERT INTO TELEFONE VALUES(NULL,'RES','99667587',1);
+INSERT INTO TELEFONE VALUES(NULL,'CEL','78989765',3);
+INSERT INTO TELEFONE VALUES(NULL,'CEL','99766676',3);
+INSERT INTO TELEFONE VALUES(NULL,'COM','66687899',1);
+INSERT INTO TELEFONE VALUES(NULL,'RES','89986668',5);
+INSERT INTO TELEFONE VALUES(NULL,'CEL','88687909',2);
